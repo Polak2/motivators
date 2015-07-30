@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  root 'mems#index'
+
+
+  resources :mems do
+    collection do
+      get 'my'
+      get 'inactive'
+    end
+
+  end
+
+
+  get 'home/index'
+  #root 'home#index'
+  devise_for :users
+  devise_for :admins
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

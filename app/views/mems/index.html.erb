@@ -1,0 +1,19 @@
+<%- model_class = Mem -%>
+
+<div class="container">
+
+  <div class="row text-center">
+  <% @mems.each do |mem| %>
+    <div class="col-md-3 col-sm-6 hero-feature">
+      <div class="thumbnail">
+        <%= image_tag(mem.image.url(:medium)) %>
+      
+        <div class="caption">
+          <h3><%= mem.name %></h3>
+          <p><%= mem.user.email %></p>
+        </div>
+     </div>
+    </div>
+  <% end %>
+  </div>  
+</div>  
