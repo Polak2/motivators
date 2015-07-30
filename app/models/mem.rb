@@ -10,6 +10,16 @@ class Mem < ActiveRecord::Base
   	self.active = false
   end
 
+  #mogloby byc tez
+  #=begin
+
+  #after_validation :set_active, on: :create
+  #def set_active
+  # self.active = false
+  #end	
+
+  #=end
+
 
   scope :active, -> { where active: true }
   scope :inactive, -> { where active: false }
