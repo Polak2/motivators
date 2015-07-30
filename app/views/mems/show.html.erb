@@ -9,9 +9,11 @@
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
   <dd><%= @mem.description %></dd>
   <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
-  <dd><%= @mem.user_id %></dd>
+  <dd><%= @mem.user.email %></dd>
   <dd><%= image_tag @mem.image.url (:medium) %></dd>
 </dl>
+
+
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
               mems_path, :class => 'btn btn-default'  %>
