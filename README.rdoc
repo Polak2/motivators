@@ -1,13 +1,13 @@
 == README
 
 
-1.You can run this app cloning this repo to your machine:
+1.You can run this app by cloning this repo to your machine:
 <tt>git clone https://github.com/Polak2/motivators.git</tt>
 
 2.Start your server:
 <tt>rails s</tt>
 
-3.Make new account and feel free to add some funny images. :)
+3.Make new user account (route localhost:3000/admin -> example admin login: a@b.com, pass: pass1234) and feel free to add some funny images. :)
 
 
 
