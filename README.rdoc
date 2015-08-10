@@ -9,9 +9,9 @@
 
 3.Make new user account (route localhost:3000/admin -> example admin login: a@b.com, pass: pass1234) and feel free to add some funny images. :)
 
-4. Added gem delayed_job. In devmode run <tt>rake jobs:work</tt> but before it you have to export two environmental variables - EMAIL and PASSWORD using export command, for example: <tt>export EMAIL="your@mail.com"</tt>. Besides you have to fill in mailer configuration: <tt>app -> config -> environments -> development.rb</tt>
+4.Added gem delayed_job. In devmode run <tt>rake jobs:work</tt> but before it you have to export two environmental variables - EMAIL and PASSWORD using export command, for example: <tt>export EMAIL="your@mail.com"</tt>. Besides you have to fill in mailer configuration: <tt>app -> config -> environments -> development.rb</tt>
 
-5.When I will finish this I will put it on Heroku. ;)
+5.When I will finish this I will put it on Heroku. :)
 
 
 
