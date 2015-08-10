@@ -4,11 +4,9 @@ Rails.application.configure do
   #Paperclip
   Paperclip.options[:command_path] = "/usr/bin/convert"
   
-  
+  #w application.rb dodana linijka na dole !!!!!!#############
 
   #smtp mail configuration
-  config.action_mailer.raise_delivery_errors = true
-
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
@@ -22,7 +20,10 @@ Rails.application.configure do
   }
   #here end
 
-
+  #dodane zeby wskazac skad maile ida, z jakiego hosta
+  config.action_mailer.default_url_options = { 
+    host: 'localhost:3000' 
+  }
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
@@ -37,7 +38,7 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true #domyslnie false jest
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

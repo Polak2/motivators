@@ -8,7 +8,8 @@ class MyDevise::RegistrationsController < Devise::RegistrationsController
 
 	def create
 		super
-		UserMailer.welcome_email(@user).deliver_now
+		#ewentualnie usunac delay i odkomentowac deliver_now
+		UserMailer.delay.welcome_email(@user)#.deliver_now
 	end
 
 end
