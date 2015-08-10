@@ -5,7 +5,7 @@ gem 'rails_admin'
 gem 'devise'
 gem 'paperclip'
 #gem 'better_errors'
-gem 'delayed_job_active_record'
+gem 'delayed_job_active_record' #odpalamy w konsoli rake jobs:work
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
