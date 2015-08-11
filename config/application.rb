@@ -24,7 +24,13 @@ module Kwejk
     config.active_record.raise_in_transactional_callbacks = true
     config.active_job.queue_adapter = :delayed_job
 
+###################################################################
+
 #http://easyactiverecord.com/blog/2014/08/19/redirecting-to-custom-404-and-500-pages-in-rails/
     config.exceptions_app = self.routes #ta linia dodana z linku wyzej
+
+#RAILS_ENV=production i potem rails s - zmienna srodowiskowa zeby w trybie produkcyjnym odpalac serw
+
+
   end
 end

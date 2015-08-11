@@ -1,4 +1,4 @@
-<%- model_class = Mem -%>
+<%- model_class = Mem -%> <!-- te linijki dodaje komenda rails g bootstrap: themed Mem -->
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
 </div>
@@ -11,6 +11,7 @@
   <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
   <dd><%= @mem.user.email %></dd>
   <dd><%= image_tag @mem.image.url (:medium) %></dd>
+  <dd><%= social_share_button_tag(@mem.name, image: @mem.image.url, url: "http://localhost:3000/mems") %></dd>
 </dl>
 
 

@@ -7,6 +7,7 @@ gem 'paperclip'
 #gem 'better_errors'
 gem 'delayed_job_active_record' #odpalamy w konsoli rake jobs:work
 
+gem 'social-share-button'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
