@@ -9,6 +9,10 @@ gem 'delayed_job_active_record' #odpalamy w konsoli rake jobs:work
 
 gem 'social-share-button'
 
+#do autentykacji przez fejsa wymagane
+#stad robione https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview
+gem 'omniauth-facebook'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use sqlite3 as the database for Active Record

@@ -1,6 +1,11 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
+  
+  #do autentykacji przez fejsa wymagane
+  config.omniauth :facebook, "392721907594348", "fc4ec078b795d7802b2dc5f370a352d1", scope: 'email', info_fields: 'email, name'
+
+
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
