@@ -4,13 +4,15 @@ gem 'twitter-bootstrap-rails'
 gem 'rails_admin'
 gem 'devise'
 gem 'paperclip'
-#gem 'better_errors'
 gem 'delayed_job_active_record' #odpalamy w konsoli rake jobs:work
 
-gem 'social-share-button'
+gem 'social-share-button' #mozemy robic share na fejsa, twittera itd
 
-#do autentykacji przez fejsa wymagane
+gem 'best_in_place', git: 'https://github.com/bernat/best_in_place.git' #edycja danych bez reloadu strony
+
+#do autentykacji przez fejsa wymagane ################################
 #stad robione https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview
+#zmodyfikowane pliki: gemfile, devise.rb, user.rb, application.html.erb, routes.rb, OmniauthCallbacksController.erb
 gem 'omniauth-facebook'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

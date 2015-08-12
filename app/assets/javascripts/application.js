@@ -15,4 +15,7 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require social-share-button
+//= require jquery.purr
+//= require best_in_place
+//= require best_in_place.jquery-ui
 //= require_tree .

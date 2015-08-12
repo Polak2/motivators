@@ -9,7 +9,7 @@ class MyDevise::RegistrationsController < Devise::RegistrationsController
 	def create
 		super
 		#ewentualnie usunac delay i odkomentowac deliver_now
-		UserMailer.delay.welcome_email(@user)#.deliver_now
+		UserMailer.delay.welcome_email(@user)#.deliver_now <- gem delayed job tera jest
 	end
 
 end

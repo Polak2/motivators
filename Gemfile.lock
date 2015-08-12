@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/bernat/best_in_place.git
+  revision: 9fa298dd8fe7599cee3ae5f863668367f89ad298
+  specs:
+    best_in_place (3.0.3)
+      actionpack (>= 3.2)
+      railties (>= 3.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -228,6 +236,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  best_in_place!
   byebug
   coffee-rails (~> 4.1.0)
   delayed_job_active_record
