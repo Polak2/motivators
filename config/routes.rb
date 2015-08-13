@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'comments/index'
+
+  get 'comments/create'
+
   get 'tags/index'
 
   get 'tags/show'
@@ -14,12 +18,16 @@ Rails.application.routes.draw do
 
   root 'mems#index'
 
+  
+
   resources :mems do
     collection do
       get 'my'
       get 'inactive'
     end
   end
+
+  resources :comments#,only: [:create, :index]
   
   devise_for :users, :controllers => { registrations: "my_devise/registrations", omniauth_callbacks: "users/omniauth_callbacks" }
   

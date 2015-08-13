@@ -20,11 +20,22 @@
   </dd>
 
 
-
-
   <dd><%= image_tag @mem.image.url (:medium) %></dd>
   <dd><%= social_share_button_tag(@mem.name, image: @mem.image.url, url: "http://localhost:3000/mems") %></dd>
+
+  <br>
+  <dt><strong>Comments:</strong><dd> <%= @mem.comments.size %></dd></dt>
 </dl>
+
+
+
+<%= render partial: 'comment', collection: @mem.comments %>
+
+<%= render 'comments/form', comment: @mem.comments.new %>
+
+
+
+<br>
 
 
 <%= link_to t('.back', :default => t("helpers.links.back")),

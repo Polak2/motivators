@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :mems
+  has_many :comments
   
   def to_s
   	"#{email}"
