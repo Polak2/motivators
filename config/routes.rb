@@ -27,7 +27,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :comments#,only: [:create, :index]
+  resources :comments, only: [:create]
   
   devise_for :users, :controllers => { registrations: "my_devise/registrations", omniauth_callbacks: "users/omniauth_callbacks" }
   

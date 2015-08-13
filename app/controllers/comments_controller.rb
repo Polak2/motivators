@@ -1,10 +1,7 @@
 class CommentsController < ApplicationController
-  def index
-  	@comments = Comment.all
-  end
 
   def create
-  	@comment = Comment.new(comment_params)
+  	#@comment = Comment.new(comment_params)
   	@comment = current_user.comments.create(comment_params)
   	
   	if @comment.save
