@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'tags/index'
+
+  get 'tags/show'
+
   #w application.rb jest link na podstawie ktorego sie te linie tu znalazly
   match '/404', to: 'errors#file_not_found', via: :all
   match '/422', to: 'errors#unprocessable', via: :all
@@ -21,5 +25,7 @@ Rails.application.routes.draw do
   
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
+  resources :tags, only: [:index, :show]
 
 end

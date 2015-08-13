@@ -11,13 +11,24 @@
   <dd><%= best_in_place @mem, :description %></dd>
   <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
   <dd><%= @mem.user.email %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tag_list) %>:</strong></dt>
+
+
+  <dd><% @mem.tags.each do |tag| %>
+    <%= link_to tag.name, tag_path(tag) %>
+    <% end %>
+  </dd>
+
+
+
+
   <dd><%= image_tag @mem.image.url (:medium) %></dd>
   <dd><%= social_share_button_tag(@mem.name, image: @mem.image.url, url: "http://localhost:3000/mems") %></dd>
 </dl>
 
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
-              mems_path, :class => 'btn btn-default'  %>
+              my_mems_path, :class => 'btn btn-default'  %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_mem_path(@mem), :class => 'btn btn-default' %>
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),

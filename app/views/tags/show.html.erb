@@ -1,0 +1,11 @@
+<h1>Mems Tagged with <%= @tag.name %></h1>
+
+<ul>
+  <% @tag.mems.each do |mem| %>
+    <li><%= link_to mem.name, mem_path(mem) %></li>
+  <% end %>
+</ul>
+
+<br>
+
+<%= link_to "Back to Mems", mems_path, class: "btn btn-default" %>

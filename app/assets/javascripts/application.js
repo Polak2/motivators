@@ -18,4 +18,10 @@
 //= require jquery.purr
 //= require best_in_place
 //= require best_in_place.jquery-ui
+//= require jquery-ui/draggable
 //= require_tree .
+$(document).ready(function() {
+    $("#draggable").draggable({
+ 
+    });
+});

@@ -10,6 +10,10 @@ gem 'social-share-button' #mozemy robic share na fejsa, twittera itd
 
 gem 'best_in_place', git: 'https://github.com/bernat/best_in_place.git' #edycja danych bez reloadu strony
 
+gem 'will_paginate'
+
+gem 'jquery-ui-rails'
+
 #do autentykacji przez fejsa wymagane ################################
 #stad robione https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview
 #zmodyfikowane pliki: gemfile, devise.rb, user.rb, application.html.erb, routes.rb, OmniauthCallbacksController.erb

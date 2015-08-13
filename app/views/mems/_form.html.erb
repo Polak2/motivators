@@ -22,6 +22,7 @@
     </div>
     <%= error_span(@mem[:name]) %>
   </div>
+
   <div class="control-group">
     <%= f.label :description, :class => 'control-label' %>
     <div class="controls">
@@ -29,12 +30,21 @@
     </div>
     <%= error_span(@mem[:description]) %>
   </div>
-    <div class="control-group">
+
+  <div class="control-group">
     <%= f.label :image, :class => 'control-label' %>
     <div class="controls">
       <%= f.file_field :image %>
     </div>
     <%= error_span(@mem[:image]) %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :tag_list, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :tag_list %>
+    </div>
+    <%= error_span(@mem[:tag_list]) %>
   </div>
   
 

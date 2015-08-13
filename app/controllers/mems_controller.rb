@@ -5,7 +5,7 @@ class MemsController < ApplicationController
   # GET /mems
   # GET /mems.json
   def index
-    @mems = Mem.active
+    @mems = Mem.active#.paginate(:page => params[:page], :per_page => 20)
   end
 
   def my
@@ -54,10 +54,10 @@ class MemsController < ApplicationController
     respond_to do |format|
       if @mem.update(mem_params)
         format.html { redirect_to @mem, notice: 'Mem was successfully updated.' }
-        format.json { render :show, status: :ok, location: @mem }
+        format.json { respond_with_bip(@mem) }
       else
         format.html { render :edit }
-        format.json { render json: @mem.errors, status: :unprocessable_entity }
+        format.json { respond_with_bip(@mem) }
       end
     end
   end
@@ -80,6 +80,6 @@ class MemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def mem_params
-      params.require(:mem).permit(:name, :description, :user_id, :image)
+      params.require(:mem).permit(:name, :description, :user_id, :image, :tag_list)
     end
 end
