@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :mems
-  has_many :comments
+  has_many :comments, dependent: :destroy
   
   def to_s
   	"#{email}"

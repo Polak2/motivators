@@ -16,7 +16,7 @@ gem 'jquery-ui-rails'
 
 #do autentykacji przez fejsa wymagane ################################
 #stad robione https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview
-#zmodyfikowane pliki: gemfile, devise.rb, user.rb, application.html.erb, routes.rb, OmniauthCallbacksController.erb
+#zmodyfikowane pliki: gemfile, devise.rb, user.rb, application.html.erb, routes.rb, OmniauthCallbacksController.rb
 gem 'omniauth-facebook'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -61,4 +61,3 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-

@@ -28,11 +28,9 @@
 </dl>
 
 
+<%= render partial: 'comment', collection: @mem.comments %> <!-- z kontrolera memow renderujemy i chyba dlatego ze slowkiem partial-->
 
-<%= render partial: 'comment', collection: @mem.comments %>
-
-<%= render 'comments/form', comment: @mem.comments.new %>
-
+<%= render 'comments/form', comment: @mem.comments.new %> <!-- bez partial bo w innym kontrolerze jest widok form -->
 
 
 <br>
